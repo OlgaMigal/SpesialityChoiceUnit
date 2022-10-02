@@ -16,35 +16,41 @@
 
 
 string[] matrix = { "hello", "2", "world", ":-)", "abcdef", "zyx" };
+int i = 0;
 int j = 0;
 PrintArray(matrix);
-/*void TaskSpecialization()
+void TaskSpecialization()
 {
     int countTo3 = CountTo3Element(matrix);
-    MatrixTo3(matrix);
-    PrintArray(matrix);
-    
+    Console.WriteLine($"Количество элементов не длиннее 3 символов = {countTo3}");
+    //string[] newMatrix = MatrixTo3(matrix, countTo3);
+    //PrintArray(newMatrix);
+
 }
 
 int CountTo3Element(string[] array)
 {
     int count = 0;
-    count += array[i].Length <= 3 ? 1 : 0;
+    foreach (string value in array)
+    {
+    count += value.Length <= 3 ? 1 : 0;
+    }
     return count;
 }
-string MatrixTo3(string[] array)
-{
-    string[] matr = new string [countTo3];
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i].Length <= 3)
-        {
-            matr[j] = array[i];
-            j++;
-        }
-    }
-    return matr;
-}*/
+// string MatrixTo3(string[] array, int count)
+// {
+//     string[] matr = new string[count];
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i].Length <= 3)
+//         {
+//             matr[j] = array[i];
+//             j++;
+//         }
+//     }
+//     return matr.ToArray;
+// }
+
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -54,4 +60,4 @@ void PrintArray(string[] array)
     Console.WriteLine();
 }
 
-//TaskSpecialization();
+TaskSpecialization();
