@@ -14,43 +14,47 @@
 // этапы 2, 3, 4 должны быть расположены в разных коммитах)
 
 
+//Камянецкий говорит, что если в консоли удобно, не нужно городить ввода с клавиатуры:
 
-string[] matrix = { "hello", "2", "world", ":-)", "abcdef", "zyx" };
-int i = 0;
-int j = 0;
-PrintArray(matrix);
+string[] matrix = { "hello", "Cпс", "world", "за", "C#!", "oneLove", "It", "is", "Асгард", "fun", "nomore", ":-)" };
+int controlLength = 3; //элементы не более скольки символов станем отбирать в новый массив
+int countTo3 = CountTo3Element(matrix);
+
 void TaskSpecialization()
 {
-    int countTo3 = CountTo3Element(matrix);
-    Console.WriteLine($"Количество элементов не длиннее 3 символов = {countTo3}");
-    //string[] newMatrix = MatrixTo3(matrix, countTo3);
-    //PrintArray(newMatrix);
-
+    PrintArray(matrix);
+    string[] newMatrix = MatrixTo3(matrix);
+    PrintArray(newMatrix);
 }
 
+//Счётчик элементов длиной не более 3 символов (аж с тернарным оператором)
 int CountTo3Element(string[] array)
 {
     int count = 0;
     foreach (string value in array)
     {
-    count += value.Length <= 3 ? 1 : 0;
+        count += value.Length <= controlLength ? 1 : 0;
     }
     return count;
 }
-// string MatrixTo3(string[] array, int count)
-// {
-//     string[] matr = new string[count];
-//     for (int i = 0; i < array.Length; i++)
-//     {
-//         if (array[i].Length <= 3)
-//         {
-//             matr[j] = array[i];
-//             j++;
-//         }
-//     }
-//     return matr.ToArray;
-// }
 
+//Создание матрицы из элементов не более 3 символов
+string[] MatrixTo3(string[] array)
+{
+    int j = 0;
+    string[] matr = new string[countTo3];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= controlLength)
+        {
+            matr[j] = array[i];
+            j++;
+        }
+    }
+    return matr;
+}
+
+// Метод печати массива
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
