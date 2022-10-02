@@ -8,7 +8,7 @@
 // Камянецкий говорит, что если в консоли удобно, не нужно городить ввода с клавиатуры:
 
 string[] matrix = { "hello", "Cпс", "world", "за", "C#!", "oneLove", "It", "is", "Асгард", "fun", "nomore", ":-)" };
-int controlLength = 3; //элементы не более скольки символов станем отбирать в новый массив
+int controlLength = 3; // элементы не более скольки символов станем отбирать в новый массив
 int countTo3 = CountTo3Element(matrix);
 
 void TaskSpecialization()
@@ -18,7 +18,7 @@ void TaskSpecialization()
     PrintArray(newMatrix);
 }
 
-//Счётчик элементов длиной не более 3 символов (аж с тернарным оператором)
+// Счётчик элементов длиной не более 3 символов (аж с тернарным оператором):
 int CountTo3Element(string[] array)
 {
     int count = 0;
@@ -29,7 +29,7 @@ int CountTo3Element(string[] array)
     return count;
 }
 
-//Создание матрицы из элементов не более 3 символов
+// Создание матрицы из элементов не более 3 символов:
 string[] MatrixTo3(string[] array)
 {
     int j = 0;
@@ -45,7 +45,7 @@ string[] MatrixTo3(string[] array)
     return matr;
 }
 
-// Метод печати массива
+// Метод печати массива:
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
