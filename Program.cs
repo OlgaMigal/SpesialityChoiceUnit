@@ -7,7 +7,7 @@
 
 // Камянецкий говорит, что если в консоли удобно, не нужно городить ввода с клавиатуры:
 
-string[] matrix = { "hello", "Cпс", "world", "за", "C#!", "oneLove", "It", "is", "Асгард", "fun", "nomore", ":-)" };
+string[] matrix = { "hello", "Cпс", "world", "за", "C#!", "oneLove", "It", "is", "Асгард", "fun", "Peace", ":-)" };
 int controlLength = 3; // элементы не более скольки символов станем отбирать в новый массив
 int countTo3 = CountTo3Element(matrix);
 
